@@ -178,14 +178,14 @@ export function renderProject(slug) {
                   <div class="team-info" style="margin-top:var(--space-4);">
                     <div class="team-name" style="font-family:var(--font-heading); font-size:var(--text-xl);">${m.name}</div>
                     <div class="team-bar-wrap" style="margin-top:var(--space-4); background:var(--bg-inset); padding:var(--space-3); border-radius:var(--radius-sm);">
-                      <div class="team-bar-label" style="font-family:var(--font-mono); font-size:10px; text-transform:uppercase;">
-                        <span style="color:var(--text-secondary);">Verified Contribution</span>
-                        <span style="font-weight: 700; color: var(--accent-green); font-size:var(--text-sm);">${m.contrib}%</span>
+                        <div class="team-bar-label" style="font-family:var(--font-mono); font-size:10px; text-transform:uppercase; display:flex; justify-content:space-between; align-items:center;">
+                          <span style="color:var(--text-secondary);">Verified Contribution</span>
+                          <span class="team-bar-percent" style="font-weight: 700; color: var(--accent-green); font-size:var(--text-sm);">0%</span>
+                        </div>
+                        <div class="progress-bar progress-green" style="height:4px; margin-top:var(--space-2);" data-target="${m.contrib}">
+                          <div class="progress-bar-fill" data-target="${m.contrib}" style="width: 0%;"></div>
+                        </div>
                       </div>
-                      <div class="progress-bar progress-green" style="height:4px; margin-top:var(--space-2);">
-                        <div class="progress-bar-fill" style="width: ${m.contrib}%;"></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               `).join('')}
